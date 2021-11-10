@@ -1,18 +1,16 @@
-
 import React from 'react';
 import StackNavigation from './src/navigations/StackNavigation';
-import { NavigationContainer } from '@react-navigation/native';
+import {NavigationContainer} from '@react-navigation/native';
+import {ContextProvider} from './src/context';
 
-
-const App= () => {
- 
-
+const App = () => {
   return (
-   <NavigationContainer>
-     <StackNavigation/>
-   </NavigationContainer>
+    <ContextProvider>
+      <NavigationContainer>
+        <StackNavigation />
+      </NavigationContainer>
+    </ContextProvider>
   );
 };
-
 
 export default App;
